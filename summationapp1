@@ -19,3 +19,4 @@ int main()
     printf("Sum = %f\n", summation(a, r, n));
     return 0;
 }
+//Time complexity -O(1)
