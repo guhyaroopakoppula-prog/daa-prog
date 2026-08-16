@@ -28,3 +28,4 @@ int main() {
     printf("small :    %d-th smallest = %d\n", k, Smallest(arr1, n, k));
     return 0;
 }
+//Time complexity -O(n²)
