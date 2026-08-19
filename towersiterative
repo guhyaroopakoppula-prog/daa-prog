@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+void move(int disk, char from, char to)
+{
+    printf("Move disk %d from %c to %c\n", disk, from, to);
+}
+int main()
+{
+    int n, i;
+    char from, to, aux;
+    printf("Enter number of disks: ");
+    scanf("%d", &n);
+    if (n % 2 == 0)
+    {
+        to = 'B';
+        aux = 'C';
+    }
+    else
+    {
+        to = 'C';
+        aux = 'B';
+    }
+    int total = pow(2, n) - 1;
+    for (i = 1; i <= total; i++)
+    {
+        if (i % 3 == 1)
+            move(1, 'A', to);
+        else if (i % 3 == 2)
+            move(2, 'A', aux);
+        else
+            move(3, aux, to);
+    }
+    return 0;
+}
