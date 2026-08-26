@@ -1,0 +1,31 @@
+#include<stdio.h>
+#define size 10
+int hashtable[size];
+void insert(int hashtable[],int key){
+    int index=(key%size);
+    while(hashtable[index]!=-1)
+    index=(index+1)%size;
+    hashtable[index]=key;
+}
+void display(int hashtable[]){
+    int i;
+    for(i=0;i<size;i++){
+        printf("%d->%d \n",i,hashtable[i]);
+    }
+}
+int main(){
+    int i;
+    int n;int keys[size];
+    for(i=0;i<size;i++){
+        hashtable[i]=-1;
+    }
+    printf("enter no of keys : ");
+    scanf("%d",&n);
+    printf("enter the keys:   ");
+    for(i=0;i<n;i++){
+        scanf("%d",&keys[i]);
+        insert(hashtable,keys[i]);
+    }
+    display(hashtable);
+    return 0;
+}
