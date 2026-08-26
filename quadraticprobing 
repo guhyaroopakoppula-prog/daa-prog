@@ -1,0 +1,33 @@
+#include<stdio.h>
+#define size 10
+int hash[size];
+void insert(int hash[],int key){
+    int index=(key%size);
+    int i=0;
+    while(hash[(index+i*i)%size]!=-1){
+        i++;
+    }
+    hash[(index+i*i)%size]=key;
+}
+void display(int hash[]){
+    int i;
+    for(i=0;i<size;i++){
+        printf("%d->%d \n",i,hash[i]);
+    }
+}
+int main(){
+    int i;
+    int n;int keys[size];
+    for(i=0;i<size;i++){
+        hash[i]=-1;
+    }
+    printf("enter no of keys : ");
+    scanf("%d",&n);
+    printf("enter the keys:   ");
+    for(i=0;i<n;i++){
+        scanf("%d",&keys[i]);
+        insert(hash,keys[i]);
+    }
+    display(hash);
+    return 0;
+}
