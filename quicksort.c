@@ -87,17 +87,19 @@ T(n) = 4(2T(n/8) + n/4) + 2n
      = 8T(n/8) + 3n ->5 
   T(n) = 2^k T(n/2^k) + k·n 
 
-Put n/2^k = 1  ⇒  n = 2^k  ⇒  k = log₂n 
+Put n/2^k = 1  
+  n = 2^k  
+ k = log n 
 
-T(n) = 2^(log₂n) T(1) + n log₂n 
+T(n) = 2^(log n) T(1) + n log n 
 
-     = n·T(1) + n log₂n 
+     = n·T(1) + n log n 
 
   
 
 T(1) = Time required to sort one element 
 
-∴ T(n) = n·T(1) + n log₂n 
+∴ T(n) = n·T(1) + n log n 
 
        = O(n log n)
 */
