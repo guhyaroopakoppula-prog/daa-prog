@@ -42,31 +42,31 @@ int main(){
     return 0;
 }
 /*
-T(n) = 2*T(n/2) + n - (1) 
+T(n) = 2*T(n/2) + n -> (1) 
 put n = n/2 in (1) 
-T(n/2) = 2*T(n/4) + n/2 -(2) 
+T(n/2) = 2*T(n/4) + n/2 ->(2) 
   
 Substitute (2) in (1) 
 T(n) = 2*(2T(n/4) + n/2) + n 
      = 4T(n/4) + n + n 
      = 4T(n/4) + 2n -(3) 
-     = 2²T(n/2²) + 2n 
+     = 2^2 T(n/2^2) + 2n 
 Put n = n/4 in (1) 
-T(n/4) = 2T(n/8) + n/4 -(4) 
+T(n/4) = 2T(n/8) + n/4 ->(4) 
 Substitute (4) in (3) 
 
 T(n) = 4(2T(n/8) + n/4) + 2n = 8T(n/8) + 3n 
-     = 2³T(n/2³) + 3n 
+     = 2^3T(n/2^3) + 3n 
 
 T(n) = 2^k T(n/2^k) + k·n 
 
-n = 2^k ⇒ log₂ n = log₂ 2^k 
-
-⇒ k = log₂ n 
-T(n) = n·T(n/n) + log₂n · n 
-     = n·T(1) + n log₂n 
+n = 2^k 
+ log n = log 2^k 
+ k = log n 
+T(n) = n·T(n/n) + log n · n 
+     = n·T(1) + n log n 
 T(1) = Time required to sort one element 
-∴ T(n) = n·T(1) + n log₂n 
+T(n) = n·T(1) + n log n 
 
-       = O(n log₂ n) 
+       = O(n log n) 
 */
