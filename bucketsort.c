@@ -28,7 +28,8 @@ int main()
 } 
 /*
 Time Complexity : 
-
+ let n=no of input values,
+ k=range of values(size of bucket array =100)
      T(n)=O(n)+O(k+n) 
 
      T(n)=O(n+k) 
